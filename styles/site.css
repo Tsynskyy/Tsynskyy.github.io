@@ -12,15 +12,52 @@ body, html
 
 .wrapper
 {
-	width: 50%;
-    height: 250px;
-    position: absolute;
-    top: 20%;
-    left: 40%;
+	position: absolute;
+	width: 40%;
+    height: 90%;
+	border-width: 2px;
+	margin-left: 30%;
+	margin-top: 2%;
 }
 
 .quiz-frame
 {
 	border: 0;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 700px) and (max-width: 1600px) {
+	.wrapper
+	{
+    	position: absolute;
+		width: 90%;
+    	height: 90%;
+		border-width: 2px;
+		margin-left: 5%;
+		margin-top: 2%;
+	}
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+	.wrapper
+	{
+    	position: absolute;
+		width: 80%;
+    	height: 95%;
+		border-width: 2px;
+		margin-left: 10%;
+		margin-top: 5%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.wrapper
+	{
+    	position: absolute;
+		width: 92%;
+    	height: 60%;
+		border-width: 2px;
+		margin-left: 4%;
+		margin-top: 40%;
+	}
 }

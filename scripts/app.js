@@ -138,7 +138,7 @@ const results =
 	new Result("Ты - деревянное ведро, бревно одним словом. Я бы посоветовал сходить на тренинг", 1),
 	new Result("Ты - ведро с цветочками, но мусорное...но с цветочками", 2),
 	new Result("Ты - металлическое ведро с цветочками, чуть лучше, чем обычное, но не зазнавайся", 3),
-	new Result("Ты - дырявое ведро, с количеством дырок равному твоему IQ. Можешь гордиться: их много", 4),
+	new Result("Ты - дырявое ведро, с количеством дырок равному твоему IQ. Можешь гордиться: дырок много", 4),
 	new Result("Ты - ведро без днища, которое уже давно пробито, но какая-то польза от тебя все же есть", 5),
 	new Result("Ты - детское ведёрко, слишком инфантильно, но ведь взрослеть не круто, правда?", 6)
 ];
@@ -279,12 +279,7 @@ function Click(index)
 
 	btns[index].className = "button button_correct";
 
-	if(index == 0) {
-		setTimeout(Update, 500);
-	}
-	else {
-		setTimeout(Update, 1000);
-	}
+	setTimeout(Update, 100);
 	
 }
 
@@ -292,11 +287,3 @@ function random(min, max) {
 	let rand = min + Math.random() * (max + 1 - min);
 	return Math.floor(rand);
 }
-
-// function setHeiHeight() {
-//     $('#hei').css({
-//         height: $(window).height() + 'px'
-//     });
-// }
-// setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-// $(window).resize(setHeiHeight); // обновляем при изменении размеров окна
