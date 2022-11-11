@@ -243,7 +243,7 @@ function Update()
 			headElem.innerHTML = quiz.results[r].text;
 		}
 		else {
-			r = random(0,7);
+			r = random(0,6);
 			headElem.innerHTML = quiz.results[r].text;
 		}
 		pageImg.src = `images/${r}.jpg`;
