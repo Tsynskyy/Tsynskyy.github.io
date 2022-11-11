@@ -6,7 +6,7 @@ body, html
 	padding: 0;
 	font-size: 16px;
 	font-family: PT Sans Caption, arial;
-	background: #f6f6f6;
+	background: rgb(17, 17, 17);
 	color: #111;
 }
 
@@ -24,6 +24,7 @@ body, html
 {
 	border: 0;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	border-radius: 50px;
 }
 
 @media (min-width: 700px) and (max-width: 1600px) {
@@ -60,4 +61,70 @@ body, html
 		margin-left: 4%;
 		margin-top: 40%;
 	}
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.box ul li {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	list-style: none;
+	opacity: 0;
+	background: radial-gradient(rgb(72, 130, 134), transparent, transparent);
+	bottom: 0;
+	left: 10vw;
+	animation: animate 15s linear infinite;
+}
+
+.box ul li:nth-child(2) {
+	left: 2vw;
+	animation-delay: 2s;
+}
+
+.box ul li:nth-child(3) {
+	left: 20vw;
+	animation-delay: 4s;
+}
+
+.box ul li:nth-child(4) {
+	left: 30vw;
+	animation-delay: 6s;
+}
+
+.box ul li:nth-child(5) {
+	left: 60vw;
+	animation-delay: 1s;
+}
+
+.box ul li:nth-child(6) {
+	left: 75vw;
+	animation-delay: 7s;
+}
+
+.box ul li:nth-child(7) {
+	left: 80vw;
+	animation-delay: 10s;
+}
+
+.box ul li:nth-child(8) {
+	left: 90vw;
+	animation-delay: 5s;
+}
+
+@keyframes animate {
+	0%{
+		transform: scale(0);
+		opacity: 1;
+		bottom: 0;
+	}
+	100%{
+		transform: scale(10);
+		opacity: 0;
+		bottom: 100vh;
+	}
+		
 }
