@@ -7,10 +7,9 @@
 	<title>Скачивание файла</title>
 	<script>
 		function downloadFile() {
-			// Попытка начать скачивание
 			try {
 				const link = document.createElement('a');
-				link.href = 'file.txt'; // Укажите путь к вашему файлу
+				link.href = 'file.txt';
 				link.download = 'file.txt';
 				document.body.appendChild(link);
 				link.click();
