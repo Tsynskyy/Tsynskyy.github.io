@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Фишинговый тест</title>
+	<title>Скачивание файла</title>
 	<script>
-		// Функция для автоматического запуска загрузки
 		function downloadFile() {
-			// Создаем элемент ссылки (anchor tag)
-			var link = document.createElement("a");
-			link.href = "file.txt";  // Укажите путь к файлу
-			link.download = "file.txt";  // Имя файла, которое будет скачано
-			link.style.display = "none";  // Скрываем ссылку с экрана
-			document.body.appendChild(link);  // Добавляем ссылку на страницу
-			link.click();  // Автоматически кликаем по ссылке
-			document.body.removeChild(link);  // Удаляем ссылку после скачивания
+			// Попытка начать скачивание
+			try {
+				const link = document.createElement('a');
+				link.href = 'file.txt'; // Укажите путь к вашему файлу
+				link.download = 'file.txt';
+				document.body.appendChild(link);
+				link.click();
+				document.body.removeChild(link);
+			} catch (e) {
+				alert("Извините, загрузка не началась");
+			}
 		}
-
-		// Запускаем функцию при загрузке страницы
-		window.onload = function () {
-			downloadFile();
-		};
 	</script>
 </head>
 
 <body>
-	<h1>Тест на безопасность</h1>
-	<p>Файл начнет загружаться автоматически. Если этого не произошло, <a href="file.txt" download>нажмите здесь для
-			загрузки.</a></p>
+	<h1>Скачивание файла</h1>
+	<p>Файл начнет загружаться автоматически. Если этого не произошло <a href="javascript:void(0)" onclick="downloadFile()">нажмите здесь для загрузки</a>.</p>
 </body>
 
 </html>
