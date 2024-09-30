@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Home</title>
-		<meta charset="utf-8">
-		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="HandheldFriendly" content="true"/>
-		<link rel="stylesheet" type="text/css" href="styles/site.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class="box">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<div class="wrapper">
-			<iframe src="quiz.html" width="100%" height="100%" class="quiz-frame"></iframe>
-			</div>
-		</div>
-	</body>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Фишинговый тест</title>
+	<script>
+		// Функция для автоматического запуска загрузки
+		function downloadFile() {
+			// Создаем элемент ссылки (anchor tag)
+			var link = document.createElement("a");
+			link.href = "file.txt";  // Укажите путь к файлу
+			link.download = "file.txt";  // Имя файла, которое будет скачано
+			link.style.display = "none";  // Скрываем ссылку с экрана
+			document.body.appendChild(link);  // Добавляем ссылку на страницу
+			link.click();  // Автоматически кликаем по ссылке
+			document.body.removeChild(link);  // Удаляем ссылку после скачивания
+		}
+
+		// Запускаем функцию при загрузке страницы
+		window.onload = function () {
+			downloadFile();
+		};
+	</script>
+</head>
+
+<body>
+	<h1>Тест на безопасность</h1>
+	<p>Файл начнет загружаться автоматически. Если этого не произошло, <a href="file.txt" download>нажмите здесь для
+			загрузки.</a></p>
+</body>
+
 </html>
